@@ -1,0 +1,197 @@
+body{
+    font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    color: #776e65;
+}
+header{
+    display: block;
+    margin: 0 auto;
+    width:92%;
+    text-align: center;
+}
+
+header h1{
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+    display: block;
+    float: left;
+}
+
+.scores-container{
+    text-align: right;
+    float: right;
+}
+
+#above-game{
+    clear: both;
+}
+
+#game-intro{
+    font-size: 18px;
+    margin: 12px auto;
+}
+
+header #newgamebutton{
+    display: block;
+    width:120px;
+    padding: 10px 10px;
+    background-color: #8f7a66;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header p{
+    min-height: 2em;
+    min-width: 4.2em;
+    position: relative;
+    display: inline-block;
+    background: #bbada0;
+    padding: 15px 25px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+#grid-container{
+    width:460px;
+    height: 460px;
+    padding: 20px;
+
+    margin: 80px auto;
+    background-color: #bbada0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.grid-cell{
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    background-color: #ccc0b3;
+    position: absolute;
+}
+
+.number-cell{
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    position: absolute;
+}
+
+.show-dialog{
+    left: 50%;
+    top: 55%;
+    background: rgba(238, 228, 218, 0.73);
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    z-index: 200;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.show{
+    -webkit-transition: all .3s ease .3s;
+    -moz-transition: all .3s ease .3s;
+    transition: all .3s ease .3s;
+    opacity: 1;
+}
+
+#game-over p,#game-win p{
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+}
+
+#tryAgain{
+    display: inline-block;
+    background: #8f7a66;
+    border-radius: 3px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: #f9f6f2;
+    height: 50px;
+    line-height: 42px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 80px;
+    font-size: 20px;
+}
+
+#game-win button{
+    display: inline-block;
+    background: #8f7a66;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #f9f6f2;
+    width: 120px;
+    height: 50px;
+    line-height: 42px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+@media (max-width: 700px){
+    header h1{
+        font-size: 50px;
+        margin-top: 10px;
+    }
+
+    header p{
+        min-width: 3.5em;
+        padding: 5px 10px;
+    }
+
+    #game-intro{
+        font-size: 15px;
+    }
+
+    header #newgamebutton{
+        padding: 6px 10px;
+        width: 110px;
+    }
+
+    #game-over p,#game-win p{
+        margin: 0;
+        margin-top: 30px;
+        font-size: 35px;
+    }
+
+    #game-win button{
+        width: 90px;
+        margin-left: 5px;
+        margin-top: 15px;
+    }
+
+    #tryAgain{
+        margin-left: 35px;
+        margin-top:20px ;
+    }
+}
+
+@media (max-height: 550px) {
+    #grid-container{
+        margin: 15px auto;
+    }
+}
+
+@media (min-height:551px)and (max-height: 600px){
+    #grid-container{
+        margin: 30px auto;
+    }
+}
+

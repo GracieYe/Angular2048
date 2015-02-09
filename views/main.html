@@ -1,0 +1,47 @@
+<div id="content" ng-controller="GameController">
+    <header>
+        <h1>2048</h1>
+        <div class="scores-container">
+            <p>score</br>{{score}}</p>
+            <p>best</br>{{bestScore}}</p>
+        </div>
+        <div id="above-game">
+            <div id="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></div>
+            <button id="newgamebutton" ng-click="newGame()">New Game</button>
+        </div>
+    </header>
+
+    <div id="grid-container">
+
+        <div class="grid-cell" id="grid-cell-0-0"></div>
+        <div class="grid-cell" id="grid-cell-0-1"></div>
+        <div class="grid-cell" id="grid-cell-0-2"></div>
+        <div class="grid-cell" id="grid-cell-0-3"></div>
+
+        <div class="grid-cell" id="grid-cell-1-0"></div>
+        <div class="grid-cell" id="grid-cell-1-1"></div>
+        <div class="grid-cell" id="grid-cell-1-2"></div>
+        <div class="grid-cell" id="grid-cell-1-3"></div>
+
+        <div class="grid-cell" id="grid-cell-2-0"></div>
+        <div class="grid-cell" id="grid-cell-2-1"></div>
+        <div class="grid-cell" id="grid-cell-2-2"></div>
+        <div class="grid-cell" id="grid-cell-2-3"></div>
+
+        <div class="grid-cell" id="grid-cell-3-0"></div>
+        <div class="grid-cell" id="grid-cell-3-1"></div>
+        <div class="grid-cell" id="grid-cell-3-2"></div>
+        <div class="grid-cell" id="grid-cell-3-3"></div>
+
+        <div id="game-over" class="show-dialog">
+            <p>Game Over</p>
+            <button id="tryAgain" ng-click="newGame()">Try Again</button>
+        </div>
+        <div id="game-win" class="show-dialog">
+            <p>Win!</p>
+            <button ng-click="continueGame()">Continue</button>
+            <button ng-click="newGame()">Restart</button>
+        </div>
+    </div>
+
+</div>
